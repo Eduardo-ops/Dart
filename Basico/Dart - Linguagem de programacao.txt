@@ -1,0 +1,10 @@
+void main(){
+  
+  // Sintaxe básica da linguagem Dart, semelhante a linguagem C e Java
+  // Simples helloWord para verificar o início da linguagem
+  
+  for(int i = 0; i < 5;i++){
+    print('Hello Word ${i+1}');
+  }
+  
+}

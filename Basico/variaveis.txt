@@ -1,0 +1,37 @@
+void main(){
+  
+  // declaração de variáveis e modificações
+  
+  String formulario = "Dados do colaborador"; // Variável do tipo string, armazena valores em sequência de caracteres, frases, texto etc.
+  String nome = "João da Silva"; // Variável do tipo string, armazena valores em sequência de caracteres, frases, texto etc.
+  int idade = 30; // Variável do tipo int, armazena valores numéricos inteiros.
+  int anosTrabalhados; // Declarando variáveis sem valor inicial.
+  double altura = 1.70; // Variável do tipo double, armazena números com pontos flutuantes.
+  bool empregado = true; // Variável do tipo bool, armazena valores verdadeiros ou falso referente a variável.
+  
+  // Concatenação de variáveis
+  print(formulario);
+  print("");
+  print("Nome do colaborador: " + nome);
+  print("Idade do colaborador: $idade");
+  print("Altura: $altura");
+  print("Empregado: $empregado");
+  
+  anosTrabalhados = 20; // atribuindo valor a variável.
+  
+  print("Quantidade de tempo de trabalho:  $anosTrabalhados");
+  
+  // Declarando variáveis sem informar seu tipo
+  
+  var teste = 1; // Variáveis declaradas como var, recebe seu valor e depois não tem possibilidade de ser alterada em outro tipo de variável.
+  print("Variável teste 1: $teste");
+  
+  dynamic teste2 = 2; // Variáveis dynamic podem ser alteradas seus tipos no decorrer dos códigos.
+  print("Variável teste 2: $teste2");
+  
+  teste2 = "Agora sou uma string";
+  
+  print("Variável teste 2: $teste2");
+  
+
+}
