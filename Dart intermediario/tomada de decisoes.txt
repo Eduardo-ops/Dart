@@ -1,0 +1,37 @@
+void main() {
+  
+  // If e else
+  
+  double n1 = 8.76;
+  
+  if(n1 > 5.0){
+    print("Exame! :(");
+  }else if(n1 == 10.0){
+    print("Sucesso!");
+  }else if(n1 == 9.0){
+    print("Quase sucesso!");
+  }else{
+    print("Sucesso!!!");
+  }
+    
+  print("Fim");
+  
+  bool aprovado = true;
+  String info;
+  
+  /*if(aprovado){
+    info = "Aprovado";
+  }else{
+    info = "reprovado";
+  }*/
+  
+  // O operador ? diz que se a variável aprovado for igual a true, recebe Aprovado, e vice versa.
+  info = aprovado ? "Aprovado" : "Reprovado";
+  print(info);
+  
+  // O operador ?? diz que se a variável nome for declarada com valor, a info 2 recebe o valor de nome, caso contrário, a   info2 recebe o valor que o operador ?? sugere, que no caso é Não informado.
+  String nome = "Eduardo";
+  String info2 = nome ?? "Não informado";
+  print(info2);
+    
+}

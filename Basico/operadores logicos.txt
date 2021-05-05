@@ -1,0 +1,75 @@
+void main() {
+  
+ // Operadores lógicos
+  
+  // Comparadores
+  
+  // > maior
+  // >= maior ou igual
+  // < menor
+  // <= menor ou igual
+  // == igual
+  // !=
+  
+  int n1 = 20;
+  String n2 = "Palavra";
+  
+  bool comparador = (10 > 20);
+  print(" 10 é maior que 20: $comparador");
+  
+  comparador = (n1 < 50);
+  print(" n1 é menor que 50: $comparador");
+  
+  comparador = (n1 == n2);
+  print(" n1 é igual a n2: $comparador");
+  
+  comparador = (n2 == "Palavra");
+  print(" n1 é igual a palavra: $comparador");
+  
+  comparador = (n2 != "Palavra");
+  print(" n1 é igual a palavra: $comparador");
+  
+  // Operador OR
+  
+  // true true -> true
+  // true false -> true
+  // false true -> true
+  // false false -> false
+  
+  bool teste = (false || true);
+  print(" teste OR: $teste");
+  
+  // Operador And
+  
+  // true true -> true
+  // true false -> false
+  // false true -> false
+  // false false -> false
+  
+  teste = (false && true);
+  print(" teste And: $teste");
+  
+  // Operador NOT inverte o valor da variável ou no resultado de uma operação, de false passa a ser true, e vice versa.
+  bool complexa = !(10 > 20) && !(!(30 < 20) || teste);
+  print(" teste Complexa: $complexa");
+  
+  print(!true);
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

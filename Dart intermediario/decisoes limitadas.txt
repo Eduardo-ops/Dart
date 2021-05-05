@@ -1,0 +1,22 @@
+void main() {
+  
+ // Decisões limitadas
+  
+  // Indicada para variáveis que tenha valores fixos, aos que tem valores que modificam ao longo da programação,          utilizaremos if e else.
+  String linguagem = "Dart";
+  int preco = 10;
+  
+  switch(linguagem){
+    case "Dart":
+        print("Legal!!!");
+        break;
+    case "Java":
+        print("Bacana");
+        break;
+    case "Python":
+        print("Top");
+        break;
+    default:
+      print("Outra...");
+  }
+}

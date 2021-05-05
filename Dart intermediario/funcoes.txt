@@ -1,0 +1,46 @@
+void main() {
+  
+  int n1 = 10;
+  int n2 = 20;
+  int n3;
+  
+  // Chamando função do tipo void.
+  for(int i = 0; i < 2;i++){
+    chamaFuncao();
+  }
+  
+  // Chamando funçao soma e passando por parametro os valores a serem somados.
+  soma(n1,n2);
+  
+  // Chamando função multiplica e passando por parametro os valores.
+  n3 = multiplica(n1,n2);
+  print(n3);
+  
+  // Chamando função resumida.
+  print(calculoArea(5.0));
+      
+}
+
+// Funções do tipo void, não nos retornam nada, pode ser declaradas com void ou até mesmo sem o void na frente do nome da função.
+
+void chamaFuncao(){
+  print("Sou uma função");
+}
+
+soma(int a, int b){
+  int res = a + b;
+  print(res);
+}
+
+// Funções que nos retornam valores
+
+int multiplica(int a, int b){
+  int res = a * b;
+  return res;
+}
+
+// Funções resumidas.
+
+double calculoArea(double raio) => 3.14 * raio * raio;
+
+// Funções são mais conhecidas como métodos, termo técnico utilizado profissionalmente.

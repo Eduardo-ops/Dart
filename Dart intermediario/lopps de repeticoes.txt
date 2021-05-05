@@ -1,0 +1,27 @@
+void main() {
+  
+  // A estrutura de repetição for é usada quando temos uma quantidade fixa de repetições a serem executadas.
+  for(int i =0; i < 10;i++){
+    print("Imprimindo o valor de i: ${i+1}");
+  }
+  
+  // Utilizaremos quando não sabemos ao certo quantas vezes vai permanecer na mesma quantidade de repetições, pois dentro do while, pode ocorrer alguma mudança na lógica e pode acabar mudando a quantidade de vezes que será repetido.
+  
+  int j = 0;
+  
+  while(j < 10){
+    print("Valor de j: ${j+1}");
+    j++;
+  }
+  
+  // Aqui o do while apresenta algo antes do laço de repetição, muito indicao para lógicas de menus, que no caso, aparece antes açgumas opções para acesso.
+  
+  int k = 0;
+  
+  do{
+    
+    print("Valor de k: $k");
+    k++;
+  }while(k < 10);
+      
+}

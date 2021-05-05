@@ -1,0 +1,34 @@
+void main() {
+  
+  // realizando operações aritiméticas.
+  
+  double n1 = 12.75;
+  double n2 = 23.80;
+  int n3 = 5;
+  
+  // Soma
+  double result = n1 + n2;
+  print("Resultado da soma: $result");
+  
+  // Multiplicação
+  result = n1 * n3;
+  print("Resultado da multiplicação: $result");
+  
+  // Subtração
+  result = n2 - n3;
+  print("Resultado da subtração: $result");
+  
+  // Diversas operações
+  result = n2 / n3;
+  print("Resultado da divisão: $result");
+  
+  result = (n2 * n1) + n3;
+  print("Resultado da operação: $result");
+  
+  n1 += 20;
+  print("Resultado de n1: $n1");
+  
+  n1 /= 2;
+  print("Resultado de n1: $n1");
+  
+}
