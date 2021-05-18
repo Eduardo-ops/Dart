@@ -1,0 +1,18 @@
+// Escopo de variáveis
+
+// Variáveis declaradas fora de funções, são acessadas em qualquer lugar no código.
+double res;
+
+void main() {
+ 
+  soma(20.56, 13.87);
+  print(res);
+  
+}
+
+// Chamando a variável res declarada acima fora de funções, sendo assim, podendo acessá-la e usá-la.
+void soma(double a, double b){
+  res = a + b;
+}
+
+

@@ -1,0 +1,64 @@
+void main() {
+  
+  // Chamando função com passagem de parâmetros normal
+  criarBotao("Botão", "azul", 20.65);
+  
+  // Chamando função com passagem de parâmetros opcionais, caso necessite informá-los, referencia o nome do parametro declarado na função e coloque seu valor.
+  criarBotao2("Botão", cor:"vermelho", largura: 13.98);
+  
+  // Chamando função com parâmetros opcional, informando o valor para cor e a largura deixaremos com o valor padrão informado na função.
+  criarBotao3("Botão", cor: "Amarelo");
+  
+  // Chamando função e passando por parâmetro outra função.
+  criarBotao4("Botão", funcParametro, "Laranja", 30.0);
+  
+  // Função sendo criado e chamada ao mesmo tempo dentro de uma outra função, não senso assim necessário passar por parâmetro uma função já criada, possibilitando fazer a criação da mesma na sua declaração por parâmetro, ficando entre (){}
+  // Muito utlizado no desenvolvimento mobile em flutter.
+  criarBotao5("Botao", (){
+    print("Botão criado por função anônima");
+  });
+  
+}
+
+// Declaração padrão de uma função
+void criarBotao(String texto, String cor, double largura){
+  print(texto);
+  print(cor);
+  print(largura);
+}
+
+// Função com parâmetros opcionais, colocamos entre colchetes.
+// Muito utilizado no desenvolvimento mobile em flutter.
+void criarBotao2(String texto, {String cor, double largura}){
+  print(texto);
+  print(cor);
+  print(largura);
+}
+
+// Função com parâmetros opcionais, colocando algum valor padrão para os parâmetros que queremos padronizar, caso não  infomamos algum valor para os parâmetros opcionais, ele recebe o nosso valor, caso contrário, recebe o valor padrão declarado na função.
+void criarBotao3(String texto, {String cor, double largura}){
+  print(texto);
+  print(cor ?? "Preto");
+  print(largura ?? 15.0);
+}
+
+// Função que recebe uma funçao como parâmetro, muito utilizado no desenvovimento mobile em flutter.
+void criarBotao4(String texto, Function botaoCriado, String cor, double largura){
+  print(texto);
+  print(cor);
+  print(largura);
+  botaoCriado();
+}
+
+// Função simples que será chamada como parametro de uma outra função.
+void funcParametro(){
+  print("Função por parametro");
+}
+
+
+void criarBotao5(String texto, Function botaoCriado, String cor, double largura){
+  print(texto);
+  print(cor);
+  print(largura);
+  botaoCriado();
+}
