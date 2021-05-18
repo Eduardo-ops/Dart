@@ -1,0 +1,48 @@
+
+class Pessoa{
+  
+  String nome = "";
+  int idade = 0;
+  
+  Pessoa(this.nome, this.idade);
+  
+}
+
+void main() {
+  
+  // Criando uma lista do tipo string
+  List<String> nomes = ["Daniel","Mari","Thiago"];
+  
+  // Adicionando elemento dentro da lista.
+  nomes.add("Marcos");
+  print("nomes");
+  
+  // Imprimindo o tamanho da lista
+  print(nomes.length);
+  
+  // Removendo um elemento da lista
+  nomes.removeAt(2);
+  print(nomes);
+  
+  // Adicionanndo um elemento em uma determinada posição da lista
+  nomes.insert(1,"Thiago");
+  print(nomes);
+  
+  // Verificando se na lista contem algum elemento igual a Daniel.
+  //print(nomes.contains("Daniel");
+        
+  // Criando uma lista vazia do tipo pessoa
+  List<Pessoa> pessoas = List();
+  
+  // Adicionando uma nova pessoa, fazendo assim a instaância da mesma.
+  pessoas.add(Pessoa("Marcelo", 30));
+  pessoas.add(Pessoa("Joao", 25));
+  
+  // Conhecido como forEach, muito utilizado no desenvolvimento em si, para cara p de pessoas, ele nos traz cada elemento dentro da lista, o p é praticamente o indicador de pessoas.
+  for(Pessoa p in pessoas){
+    print(p.nome);
+  }
+  
+  
+  
+}

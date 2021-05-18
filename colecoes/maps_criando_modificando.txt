@@ -1,0 +1,47 @@
+
+class InfoPessoa{
+
+  int idade = 0;
+  InfoPessoa(this.idade);
+  
+}
+
+void main() {
+  
+  // Maps são praticamente uma tabela
+  // Recebe uma chave e um valor
+  
+  // chave  valor
+  // nome   daniel
+  // cidade são paulo
+  
+  // Criando um map de dds de cidades, recebe uma chave do tipo int e um valor do tipo String.
+  Map<int, String> dds = Map();
+  
+  dds[11] = "São Paulo";
+  dds[35] = "Pouso alegre";
+  dds[19] = "Campinas";
+  
+  // Retorna somente as chaves.
+  print(dds.keys);
+  
+  // Retona somente os valores
+  print(dds.values);
+  
+  //Retorna chaves e valores juntos;
+  print(dds);
+  
+  // Removendo uma dterminada chave
+  dds.remove(11);
+  
+  Map<String, dynamic> pessoas = Map();
+  
+  pessoas["Nome"] = "Paulo";
+  pessoas["Idade"] = 25;
+  pessoas["Altura"] = 1.76; 
+  
+  Map<String, InfoPessoa> pessoa = Map();
+  pessoa["João"] = InfoPessoa(30);
+  pessoa["marcos"] = InfoPessoa(25);
+  
+}
