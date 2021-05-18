@@ -1,0 +1,56 @@
+
+// Classe abstrata é uma classe que serve de modelo para as demais, sempre será a superclasse, ou seja, a casse mãe, não pode ser instanciada e pode ou não conter métodos abstratos, podendo ser implementado as classes herdadas descendentes.
+abstract class Animal{
+  
+  String nome = "";
+  double peso = 0.0;
+  
+  Animal(this.nome, this.peso);
+  
+  // Declaramos o método sem implementar sua lógica, sendo assim, necessário suas classes filhas com a anotação @override, chamar o método e implementar sua lógica, sendo também obrigatório implementar seus metodos.
+  void comer();
+  
+  void fazerSom();
+  
+}
+
+class Cachoro extends Animal{
+  
+  int alegria = 0;
+  
+  Cachorro(String nome, double peso, this.alegria) : super(nome,peso);
+  
+  void brincar(){
+    alegria += 10;
+    print("Alegria de $nome aumentou para $alegria!!!");
+  }
+  
+  @override
+  void comer(){
+    print("Cachorro está comendo!"); 
+  }
+  
+}
+
+class Gato extends Animal{
+  
+  Gato(String nome, double peso): super(nome,peso);
+  
+  bool estadoAmigavel(){
+    return true;
+  }
+  
+  @override
+  void comer(){
+    print("Gato s encontra alimentado!"); 
+  }
+  
+}
+
+
+void main() {
+  
+}
+
+
+

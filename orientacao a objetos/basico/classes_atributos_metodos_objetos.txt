@@ -1,0 +1,54 @@
+
+// Classe é como uma planta de uma casa, a estrutura em si, com todas suas características e funções que realiza.
+class Pessoa{
+  
+  // Declaremos os atributos que uma pessoa tem.
+  String nome = "";
+  int idade = 0;
+  double altura = 0.0;
+  
+  // Funçõe que uma pessoa realiza, chamamos pelo termo técnico de métodos.
+  void dormir(){
+    print("$nome está dormindo em pé.");
+  }
+  
+  void fazerAniversario(){
+    idade++;
+  }
+}
+
+void main() {
+ 
+  // Instanciando um objeto do tipo pessoa.
+  Pessoa p1 = new Pessoa();
+  // Recomenda-se utilizar o seguinte modo de instanciar, pois no decorrer da programação, pode confundir os news declarados.
+  Pessoa p2 = Pessoa();
+  
+  // Atribuindo valores nos atributos do objeto do tipo pessoa.
+  p1.nome = "Antônio";
+  p1.idade = 30;
+  p1.altura = 1.85;
+  
+  p2.nome = "Marcos";
+  p2.idade = 25;
+  p2.altura = 1.76;
+  
+  print("Pessoa 1: " + p1.nome);
+  print("Pessoa 2: " + p2.nome);
+  
+  print("Idade de " + p1.nome + ": ${p1.idade}");
+  // Chamados o método fazerAniversario e a idade de p1 é somada, logo é mostrada no print para comprovar o funcionamento.
+  p1.fazerAniversario();
+  print("Idade atual de " + p1.nome + ": ${p1.idade}");
+  
+  // Chamando o método dormir de p2 e logo mostra seu status.
+  p2.dormir();
+  
+  // Temos as classes que é uma planta/estrutura de alguma coisa, seus atributos específicos e métodos que são as suas funcionalidades que seram realizadas. 
+  
+  
+  
+}
+
+
+

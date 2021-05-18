@@ -1,0 +1,72 @@
+
+// Utilizaremos o getters e Setters quando queremos dar uma proteção para um determinado atributo, acessando assim de forma mais segura.
+// Deve-se usar somente quando for necessário em algum atributo específico.
+
+class Pessoa{
+  
+  String nome;
+  // O anderline na frente do atributo indica que só pode ser acessado dentro do objeto.
+  int _idade;
+  double _altura;
+  
+  Pessoa(this.nome, this._idade, this._altura);
+  
+  Pessoa.nascer(this.nome, this._altura){
+    _idade = 0;
+    print("$nome nasceu!");
+    dormir();
+  }
+  
+  void dormir(){
+    print("$nome está dormindo em pé.");
+  }
+  
+  void fazerAniversario(){
+    _idade++;
+  }
+  
+  // Declaração do getter para acessar a variável
+//   int get idade{
+//     return _idade;
+//   }
+  
+  // Segundo tipo de declaração do getter.
+  int get => _idade;
+  
+  double get => _alutra;
+  
+  // Com a decaração do set da variável, podemos agora atribuir valores a ela de modo mais seguro.
+  set altura(double altura){
+    if(altura > 0.0 && altura < 3.0){
+      _altura = altura;
+    }
+  }
+
+void main() {
+  
+  Pessoa p1 = Pessoa("Marcos", 30,1.75);
+  Pessoa p2 = Pessoa("Rafael", 20, 1.80);
+  
+  print(p1.nome);
+  print(p2.nome);
+  
+  print("Idade de " + p1.nome + ": ${p1.idade}");
+  p1.fazerAniversario();
+  print("Idade atual de " + p1.nome + ": ${p1.idade}");
+ 
+  p2.dormir();
+  
+  Pessoa bebe = Pessoa("Davi",0.30);
+  print(bebe.nome);
+  print(bebe.idade);
+  
+  // Aqui nos permite atribuir o valor 2.0, pois está dentro da condição do valor que o atributo pode receber.
+  bebe.altura = 2.0;
+  
+  // Já aqui não aceita o valor de 3.0 devido a condição que o  atributo recebe.
+  bebe.altura = 3.6;
+  
+}
+
+
+

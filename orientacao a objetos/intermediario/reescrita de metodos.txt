@@ -1,0 +1,80 @@
+
+
+class Animal{
+  
+  String nome = "";
+  double peso = 0.0;
+  
+  Animal(this.nome, this.peso);
+  
+  void comer(){
+    print("$nome comeu!");
+  }
+  
+  void fazerSom(){
+    print("$nome fez algum som!");
+  }
+  
+}
+
+class Cachoro extends Animal{
+  
+  int alegria = 0;
+  
+  Cachorro(String nome, double peso, this.alegria) : super(nome,peso);
+  
+  void brincar(){
+    alegria += 10;
+    print("Alegria de $nome aumentou para $alegria!!!");
+  }
+  
+  // Com o @override, utilizamos para chamar o metodo para dentro da classe que herda, a fim de que seja para um uso específico que irá ser utilizada, pois o mesmo método aqui, faz a mesma função, que é fazer um som, porém o som não é o mesmo que o do gato.
+  @override
+  void fazerSom(){
+    print("Au au");
+  }
+ 
+  // O método soString né herdado da classe objetc, uma classe no Dart, onde é possível retornar uma apresentação de um objeto da classe que é declarado em si.
+  @override
+  String toString(){
+    return "Cachorro | Nome: $nome, Peso: $peso, Alegria: $alegria";
+  }
+  
+}
+
+class Gato extends Animal{
+  
+  Gato(String nome, double peso): super(nome,peso);
+  
+  bool estadoAmigavel(){
+    return true;
+  }
+  
+  @override
+  void fazerSom(){
+    print("Miauuu");
+  }
+  
+}
+
+
+void main() {
+  
+  Cachorro cachorro = Cachorro("Tina", 10.0, 100);
+  cachorro.fazerSom();
+  cachorro.comer();
+  cachorro.brincar();
+  
+  // Chamamos o próprio objeto dentro do print para que assim, exiba todos os atributos com seus valores, assim não precisamo ficar dando vários prints para mostrar os demais valores de cada atributo, sendo assim possível pelo método toString declarado na classe.
+  print(cachorro);
+  
+  Gato gato = Gato("Thor", 4.0);
+  gato.fazerSom;
+  gato.comer();
+  
+  print("Está amigável? ${gato.estadoAmigavel()}");
+  
+}
+
+
+

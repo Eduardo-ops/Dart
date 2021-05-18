@@ -1,0 +1,67 @@
+
+// Construtores são funções utilizadas para construir nosso objeto.
+
+class Pessoa{
+  
+  String nome;
+  int idade;
+  double altura;
+  
+  // Declaração de construtor.
+  /*Pessoa(String nome, int idade, double altura){
+    this.nome = nome;
+    this.idade = idade;
+    this.altura = altura;
+  }*/
+  
+  // Declaração de construtor mais utilizada e simplificada.
+  Pessoa(this.nome, this.idade, this.altura);
+  
+  // Construtor named, named contructor, nos permite passar por parâmetro somente os atributos que iremos utilizar.
+  Pessoa.nascer(this.nome, this.altura){
+    idade = 0;
+    print("$nome nasceu!");
+    dormir();
+  }
+  
+  void dormir(){
+    print("$nome está dormindo em pé.");
+  }
+  
+  void fazerAniversario(){
+    idade++;
+  }
+  
+}
+
+void main() {
+  
+  /*Pessoa p2 = Pessoa();
+  
+  p2.nome = "Marcos";
+  p2.idade = 25;
+  p2.altura = 1.76;
+ */
+  
+  // Forma de criar um objeto e passar seus valores com base no construtor, muito mais simples e direto, compare com o modelo acima.
+  Pessoa p1 = Pessoa("Marcos", 30,1.75);
+  Pessoa p2 = Pessoa("Rafael", 20, 1.80);
+  
+  print(p1.nome);
+  print(p2.nome);
+  
+  print("Idade de " + p1.nome + ": ${p1.idade}");
+  p1.fazerAniversario();
+  print("Idade atual de " + p1.nome + ": ${p1.idade}");
+ 
+  p2.dormir();
+  
+  // Criando novo objeto de pessoa e fassando os parametros conforme construtor nos auxilia.
+  Pessoa bebe = Pessoa("Davi",0.30);
+  print(bebe.nome);
+  print(bebe.idade);
+  
+}
+
+
+

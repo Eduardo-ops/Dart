@@ -1,0 +1,24 @@
+
+class Valores {
+  
+  // Declarando a variável com o static antes, torna-se a variável propriedade da classe, ao invés de ser de objetos.
+  static int vezesClicado;
+  
+}
+
+void main() {
+  
+  // Assim não precisamos instanciar um objeto para acessá-la, podendo acessar ela diretamente informando o nome da classe.
+  Valores.vezesClicado = 10;
+  
+  // Variáveis do tipo const, não pode ter seu valor alterado em parte alguma do código.
+  const n1 = 10;
+  
+  //Objetos declarados com Final,não pode ser de outra classe uma vez declarado desse forma na hora da instância.
+  final Valores v1 = Valores();
+  
+  
+}
+
+
+
